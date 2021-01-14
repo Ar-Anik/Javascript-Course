@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> toFixed() toPrecision() Number() </title>
+
+    </head>
+
+    <body>
+
+        <script>
+
+            /* toFixed() count Number Decimal Point */
+
+            var num = 123.45678;
+            var r = num.toFixed(2);
+
+            document.write("Number :: ", r , "<br>");
+
+
+            /* toPrecision() count Number from start Point */
+
+            var num1 = 983.123456;
+            var a = num1.toPrecision(4);
+            var b = num1.toPrecision(15);
+
+            document.write("Number :: ", a, "<br>");
+            document.write("Number :: ", b , "<br>");
+            
+            /* Number() */
+
+            var n = Number("1234456");
+            document.write(n, "<br>");
+
+            n = Number("    1212    ");
+            document.write(n, "<br>");
+
+            n = Number("  1  2  3");
+            document.write(n, "<br>");
+
+            n = Number(true);
+            document.write(n, "<br>");
+
+            n = Number(false);
+            document.write(n, "<br>");
+
+        </script>
+
+    </body>
+</html>
