@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Temperature Convert </title>
+        
+    </head>
+
+    <body>
+    
+        <script>
+
+            // Fahrenheit to Celsius
+            var fahrenheit = parseFloat(prompt("Enter Fahrenheit Temperature :: "));
+            var celcius = (fahrenheit-32) * (5/9);
+
+            document.write("Celcius Temperature :: " + celcius + "<br>");
+
+            // Celsius to Fahrenheit
+            var celcius = parseFloat(prompt("Enter Celcius Temperature :: "));
+            var fahrenheit = (celcius * (9/5)) + 32;
+
+            document.write("Fahrenheit Temperature :: " + fahrenheit + "<br>");
+
+        </script>
+        
+    </body>
+
+</html>

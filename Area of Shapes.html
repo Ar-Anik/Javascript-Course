@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Area Of Shapes </title>
+
+    </head>
+
+    <body>
+        
+        <script>
+
+            // Square Area
+
+            var side = parseFloat(prompt("Enter a side of a square :: "));
+            var squreArea = side * side;
+
+            document.write("Square Area :: " + squreArea + "<br>");
+
+            // Rectangle Area 
+
+            var base = parseFloat(prompt("Enter Rectangle Base :: "));
+            var height = parseFloat(prompt("Enter Rectangle Height :: "));
+            var rectangleArea = base * height;
+
+            document.write("Rectangle Area :: " + rectangleArea + "<br>");
+
+            // Triangle Area
+
+            var base = parseFloat(prompt("Enter Triangle Base :: "));
+            var pheight = parseFloat(prompt("Enter Triangle Perpendicular Height :: "));
+            var triangleArea = 0.5 * base * pheight;
+
+            document.write("Triangle Area :: " + triangleArea + "<br>");
+
+            // Parallelogram Area
+
+            var base = parseFloat(prompt("Enter Parallelogram Base :: "));
+            var vheight = parseFloat(prompt("Enter Vertical Height :: "));
+            var parallelogramArea = base * vheight;
+
+            document.write("Parallelogram Area :: " + parallelogramArea + "<br>");
+
+        </script>
+        
+    </body>
+</html>
