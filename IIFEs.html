@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> IIFEs </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            /*Functions that are executed as soon as they are mounted, 
+            these functions are known as Immediately Invoked Function Expressions 
+            or IIFEs*/
+
+            //Example-1
+            (function display(str) 
+            { 
+                console.log(str); 
+            })("My Name is Aubdur Rob Anik.");
+
+            //Example-2
+            (function(str)
+            {
+                console.log(str);
+            })("My University Name is UAP.");
+
+            //Example-3
+            function write()
+            {
+                document.write("My Name is ");
+                (function()
+                {
+                    document.write("Aubdur Rob ");
+                })();
+                document.write("Anik", "<br>");
+            }
+
+            write();
+
+            //Function Expressions
+            var fnc = function expression(str)
+            {
+                document.write(str, "<br>")
+                document.write("National Father : Sheik Mujib")
+            }
+
+            fnc("15 August");
+
+        </script>
+
+    </body>
+</html>

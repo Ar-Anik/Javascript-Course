@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Ternary Operator </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            var n = Number(prompt("Enter First Number :: "));
+            var m = Number(prompt("Enter Second Number :: "));
+
+            var result = n >= 0 ? "Positive" : "Negative";
+            document.write("First Number is  :: ", result, "</br>");
+
+            var answer = m >= 0 ? (m == 0 ? "Zero" : "Positive") : "Negative";
+            document.write("Second Number is :: ", answer, "</br>");
+
+            var str = prompt("Enter A Name :: ");
+            var ans = str == "Anik" ? "Name : Anik" : str == "Sourov" ? "Name : Sourov" : str == "Shohan" ? "Name : Shohan" : str == "Sojib" ? "Name : Sojib" : "Unknown Name";
+
+            document.write(ans);
+
+        </script>
+
+    </body>
+</html>
