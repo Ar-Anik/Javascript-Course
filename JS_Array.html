@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Array </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            var names = new Array(5);
+            names[0] = "Anik";
+            names[1] = "Oni";
+            names[2] = "Jonny";
+            names[3] = "Joy";
+            names[4] = "Bob";
+
+            document.write("Array :: ", names, "<br>");
+            document.write(names[2]," ", names[4], "<br>");
+
+            document.write("Array Length :: ", names.length, "<br>");
+
+
+            var animal = new Array();
+            animal[0] = "Tiger";
+            animal[1] = "Fox";
+            animal[2] = "Deer";
+            animal[3] = "Monkey";
+            animal[4] = "Horse";
+            animal[5] = "Lion";
+            animal[6] = "Sheep";
+            animal[7] = "Panda";
+
+            document.write("Array :: ", animal, "<br>");
+
+            animal.push("Rabbit");
+            animal.push("Wolf");
+
+            document.write("Array :: ", animal, "<br>");
+
+            animal.pop();
+            document.write(animal.length, "<br>");
+
+            animal.pop();
+            document.write(animal.length, "<br>");
+
+            var flower1 = ["Rose", "Lily", "Sunflower", "Tulip"];
+            document.write("Array :: ", flower1, "<br>");
+
+            var flower2 = ["Iris", "Orchid"];
+            document.write("Array :: ", flower2, "<br>");
+
+            var add = flower1 + flower2;
+            document.write("Flower Name : ", add, "<br>");
+
+            var concat = flower1.concat(flower2);
+            document.write("Flower Name :: ", concat);
+
+
+        </script>
+
+    </body>
+</html>

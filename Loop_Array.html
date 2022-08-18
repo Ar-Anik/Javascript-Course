@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Loop-Array </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            var n = parseInt(prompt("Enter Array Size :: "));
+            var num = new Array(n);
+            var sum = 0;
+
+            for(var i=0; i<n; i++)
+            {
+                num[i] = parseInt(prompt("Enter Element :: "));
+                sum += num[i];
+            }
+
+            document.write("Summation :: ", sum, "<br>");
+
+            document.write("Array Element :: ");
+            for(var i in num)
+                document.write(num[i], " ");
+            document.write("<br>");
+
+
+        </script>
+
+    </body>
+</html>
