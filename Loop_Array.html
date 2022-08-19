@@ -29,6 +29,32 @@
                 document.write(num[i], " ");
             document.write("<br>");
 
+            //forEach() method calls the provided function once for each element of the array. 
+            //The provided function may perform any kind of operation on the elements of the given array.
+
+            // Example - 1
+            var arr1 = [12, 24, 36];
+            var copy = [];
+
+            arr1.forEach(function (item){
+                copy.push(item + item + 2);
+            });
+
+            document.write(copy, "<br>");
+
+            // Example - 2
+            function func(){
+                var arr = [5, 4, 3, 2, 1];
+                var arr_copy = [];
+                
+                arr.forEach(function (item){
+                    arr_copy.push(item * item);
+                });
+
+                document.write(arr_copy);
+            }
+
+            func();
 
         </script>
 

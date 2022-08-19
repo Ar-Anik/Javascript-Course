@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Array Operation </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            var animal = [];
+            animal.push("Dog");
+            animal.push("Cat");
+            animal.push("Goat");
+            animal.push("Cow");
+            animal.push("Tiger");
+
+            document.write("Array :: ", animal, "<br>");
+            document.write("Array Size :: ", animal.length, "<br>");
+
+            // shift opposite of pop
+            animal.shift();
+            document.write("After Shift Array :: ", animal, "<br>");
+            document.write("After Shift Array Size :: ", animal.length, "<br>");
+
+            animal.shift();
+            document.write("After Shift Array :: ", animal, "<br>");
+            document.write("After Shift Array Size :: ", animal.length, "<br>");
+
+            //unshift opposite of push
+            animal.unshift("Lion");
+            animal.unshift("Rabbit");
+            animal.unshift("Deer");
+
+            document.write("After Unshift Array :: ", animal, "<br>");
+            document.write("After Shift Array Size :: ", animal.length, "<br>");
+
+            // splice(position, remove element, add element)
+            animal.splice(2, 0, "Wolf", "Bear");
+            document.write("After Splice Array :: ", animal, "<br>");
+
+            animal.splice(1, 2, "Hen", "Dack");
+            document.write("After Splice Array :: ", animal, "<br>");
+
+            // slice(first index, last index)
+            var new_animal = animal.slice(1, 4);
+            document.write("Afer Slice Array :: ", new_animal, "<br>");
+
+            // sort function
+            animal.sort();
+            document.write("After Sort Array :: ", animal, "<br>");
+
+            // reverse order
+            animal.reverse();
+            document.write("After Rerverse :: ", animal, "<br>");
+
+            // sort for number element array
+            var num = [20, 1, 5, 3, 4, 2, 9, 7, 0];
+            num.sort(function (a, b){    // like a = 0 and b = 1
+                return a-b;             // if a-b > 0 then b is smaller and b position is before a.
+            });
+
+            document.write("After Sort Number Array :: ", num, "<br>");
+
+            // reverse order for number element array
+            var nm = [20, 1, 5, 3, 4, 2, 9, 7, 0];
+            nm.sort(function (a, b){
+                return b-a;
+            });
+            
+            document.write("After Reverse Number Array :: ", nm, "<br>");
+
+        </script>
+
+    </body>
+</html>
