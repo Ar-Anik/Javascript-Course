@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script> 
+
+        var match = 0, unmatch = 0;
+        var i = 1;
+        while(i <= 5)
+        {
+            var GuessNumber = parseInt(prompt("Enter A Number From 1 to 5 : "));
+            var RandomNumber = Math.floor(Math.random()*5) + 1;
+
+            if(GuessNumber === RandomNumber)
+            {
+                match++;
+                document.write("You Won", "<br>");
+            }else{
+                unmatch++;
+                document.write("You Lost and Number is : ", RandomNumber, "<br>");
+            }
+
+            i++;
+        }
+
+        document.write("You Won Total : ", match, " Match <br>");
+        document.write("You Lost Total : ", unmatch, " Match <br>");
+
+    </script>
+
+</body>
+</html>

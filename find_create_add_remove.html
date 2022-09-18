@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find Create Add Remove </title>
+</head>
+<body>
+    
+    <a href="#"> Aubdur Rob Anik </a>
+
+    <br>
+
+    <h1> University of Asia Pacific </h1>
+    <h1> Mayer Doya Cha Store </h1>
+
+    <div id="id1" class="cls1" style="background-color: blue;">
+        <h1> 15-9-2022 </h1>
+        <h1> Javascript Bangla Tutorial </h1>
+        <p class="cls2"> This is class 3. </p>
+    </div>
+
+    <script>
+
+        var lnk = document.getElementsByTagName("a")[0];
+
+        document.write(lnk, "<br>");
+
+        document.write(lnk.innerHTML, "<br>");
+
+        lnk.innerHTML = "Ar Anik";
+
+        lnk.style.textDecoration = "none";
+
+        lnk.style.color = "red";
+
+        lnk.style.fontSize = "3rem";
+
+        document.write(lnk.href, "<br>");
+
+        lnk.href = "http://aranik43.blogspot.com/";
+
+        var hdObj1 = document.createElement("h4");
+        document.write(hdObj1, "<br>");
+
+        var txt1 = document.createTextNode("This come from text 1.");
+        document.write(txt1, "<br>");
+
+        hdObj1.appendChild(txt1);
+
+        var hd1 = document.getElementsByTagName("h1")[0];
+        document.write(hd1, "<br>");
+
+        hd1.appendChild(hdObj1);
+        
+        var hdObj2 = document.createElement("h5");
+        var txt2 = document.createTextNode("This come from text 2.");
+        var hd2 = document.getElementsByTagName("h1")[1];
+        
+        hdObj2.appendChild(txt2);
+        hd2.appendChild(hdObj2);
+
+
+        var hdObj3 = document.createElement("h3");
+        var txt3 = document.createTextNode("This come from text 3.");
+        var div1 = document.getElementById("id1");
+
+        hdObj3.appendChild(txt3);
+        div1.appendChild(hdObj3);
+
+        // remove
+        var hd3 = document.querySelectorAll("#id1 h1")[1];
+        document.write(hd3, "<br>");
+        div1.removeChild(hd3);
+
+        // insert before
+        var hdObj4 = document.createElement("h1");
+        var txt4 = document.createTextNode("This Come From Text 4.");
+        var hd4 = document.querySelectorAll("#id1 h1")[0];
+
+        hdObj4.appendChild(txt4);
+        div1.insertBefore(hdObj4, hd4);
+
+        // Run From console
+        /*
+            document.getElementById("id1").classList;
+            document.getElementById("id1").classList.add("cls1");
+            document.getElementById("id1").classList.add("cls2");
+
+            document.getElementById("id1").classList.remove("cls2");
+            document.getElementById("id1").classList;
+        */
+        
+    </script>
+
+</body>
+</html>

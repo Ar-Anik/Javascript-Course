@@ -1,0 +1,14 @@
+.btn{
+    color : tomato;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+
+.animi{
+    box-shadow: 0 15px 18px 0 tomato;
+    opacity: 0.5;
+}

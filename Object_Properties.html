@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Object Properties </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            var info = {
+                name : "Ar Anik",
+                age : 21,
+                cgpa : 3.57,
+            }
+
+            info.department = "CSE";
+
+            for(var x in info)
+                document.write(x, " : ", info[x], "<br>");
+
+            // Delete
+            delete info.age;
+
+            document.write("<br> After Delete <br>");
+            for(var x in info)
+                document.write(x, " : ", info[x], "<br>");
+            
+
+        </script>
+
+    </body>
+</html>

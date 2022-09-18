@@ -1,0 +1,17 @@
+.btn
+{
+    color : darkgoldenrod;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.animi
+{
+    box-shadow: 0 15px 18px 0 tomato;
+    opacity: 0.5;
+}

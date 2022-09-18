@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date </title>
+</head>
+<body>
+    
+    <script>
+
+        var date = new Date();
+        document.write("Full Date : ", date, "<br>");
+
+        var year = date.getFullYear();
+        document.write("Year : ", year, "<br>");
+
+        var month = date.getMonth();
+        document.write("Month : ", month, "<br>");
+
+        var dt = date.getDate();
+        document.write("Date : ", dt, "<br>");
+
+        var day = date.getDay();
+        document.write("Day : ", day, "<br>");
+
+        // give our milliseond from 1 january 1970
+        var time = date.getTime();
+        document.write("Time : ", time, "<br>");
+
+        var hours = date.getHours();
+        document.write("Hour : ", hours, "<br>");
+
+        var minute = date.getMinutes();
+        document.write("Minutes: ", minute, "<br>");
+
+        var second = date.getSeconds();
+        document.write("Second : ", second, "<br>");
+
+        var milisecond = date.getMilliseconds();
+        document.write("Millisecond : ", milisecond, "<br>");
+
+        // specific date
+        // 7 numbers specify year, month, day, hour, minute, second, and millisecond 
+        var dt1 = new Date(2022, 11, 24, 10, 33, 30, 0);
+        document.write(dt1, "<br>");
+
+        // 5 numbers specify year, month, day, hour, and minute
+        var dt2 = new Date(2022, 11, 24, 10, 33);
+        document.write(dt2, "<br>");
+
+        // 4 numbers specify year, month, day, and hour
+        var dt3 = new Date(2022, 11, 24, 10);
+        document.write(dt3, "<br>");
+
+        // 3 numbers specify year, month and day
+        var dt4 = new Date(2022, 11, 24);
+        document.write(dt4, "<br>");
+
+        // 2 numbers specify year and month
+        var dt5 = new Date(2022, 11);
+        document.write(dt5, "<br>");
+
+        // 1 numbers specify year
+        var dt6 = new Date(2022);
+        document.write(dt6, "<br>");
+
+        // date string to date object
+        var dte = new Date("September 13, 2022 9:13:40");
+        document.write(dte, "<br>");
+
+        var date1 = new Date();
+        var d1 = date1.toString();
+        document.write(d1, "<br>");
+        document.write(typeof(d1), "<br>");
+
+        var d2 = new Date();
+        d2 = d2.toUTCString()
+        document.write(d2, "<br>");
+
+        var d3 = new Date();
+        document.write(d3.toISOString(), "<br>");
+        
+
+    </script>
+
+</body>
+</html>

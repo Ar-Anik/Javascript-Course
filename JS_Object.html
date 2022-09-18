@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Javascript Object </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+
+            //Example-1
+            var student1 = {
+                name : "Aubdur Rob Anik",
+                age : 21,
+                cgpa : 3.57,
+                university : "University of Asia Pacific"
+            }
+
+            document.write(student1.name, "<br>");
+            document.write(student1.age, "<br>");
+            document.write(student1.cgpa, "<br>");
+            document.write(student1.university, "<br>");
+
+            //Example-2
+            var student2 = {};
+            student2.name = "Abu Bokker Siddike";
+            student2.age = 20;
+            student2.cgpa = 3.15;
+            student2.university = "Brac University";
+
+            document.write(student2.name, "<br>");
+            document.write(student2.age, "<br>");
+            document.write(student2.cgpa, "<br>");
+            document.write(student2.university, "<br>");
+
+            //Example-3
+            var student3 = {
+                name : "Anisul Islam Oni",
+                age : 23,
+                cgpa : 3.52,
+                university : "Canadian University"
+            }
+            var x = student3;
+
+            document.write(x["name"], "<br>");
+            document.write(x["age"], "<br>");
+            document.write(x["cgpa"], "<br>");
+            document.write(x["university"], "<br>");
+
+        </script>
+
+    </body>
+</html>

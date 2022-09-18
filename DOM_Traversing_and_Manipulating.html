@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Traversing And Manipulating </title>
+</head>
+<body>
+
+    <ol class="std-list-1">
+        <li class="std-a"> Student A </li>
+        <li class="std-b"> Student B </li>
+        <li class="std-c"> Student C </li>
+    </ol>
+
+    <ol class="std-list-2">
+        <li class="std-a"> First Student </li>
+        <li class="std-b"> Second Student </li>
+        <li class="std-c"> Third Student </li>
+    </ol>
+
+    <ol class="std-list-3">
+        <li class="std-a"> Student First </li>
+        <li class="std-b"> Student Second </li>
+        <li class="std-c"> Student Third </li>
+    </ol>
+
+    <ol class="std-list-4">
+        <li class="std-a"> Student-1 </li>
+        <li class="std-b"> Student-2 </li>
+        <li class="std-c"> Student-3 </li>
+    </ol>
+
+    <ol class="std-list-5">
+        <li class="std-a"> Student Number-1 </li>
+        <li class="std-b"> Student Number-2 </li>
+        <li class="std-c"> Student Number-3 </li>
+    </ol>
+
+    <script>
+
+        // Manipulating ----> creating, inserting, removing 
+        // Traversing ----> selecting an element from other elements
+
+        // Downwards ---> 1.querySelector() / querySelectorAll()
+        //           ---> 2.children
+
+        // Upwards   ---> 1. parentElement
+
+        // Sideways  ---> 1. nextElementSibling, previousElementSibling
+        //           ---> 2. parentElement + children + index
+
+        // Downwards-1
+        var stdol1 = document.querySelector(".std-list-1");
+        
+        var ol1_li1 = stdol1.querySelector(".std-a"); 
+        ol1_li1.style.color = "blue";
+
+        var ol1_li3 = stdol1.querySelector(".std-c");
+        ol1_li3.style.color = "red";
+
+        // Downwards-2
+        var stdol2 = document.querySelector(".std-list-2");
+
+        stdol2.children[0].style.backgroundColor = "green";
+        stdol2.children[1].style.backgroundColor = "blue";
+        stdol2.children[2].style.backgroundColor = "yellow";
+
+        // Upwards
+        var ol3_li1 = document.querySelector(".std-list-3 li");
+        ol3_li1.parentElement.style.backgroundColor = "red";
+
+        // sideways-1
+        var first = document.querySelector(".std-list-4 li");
+        first.style.color = "yellow";
+        
+        var second = first.nextElementSibling;
+        second.style.color = "red";
+
+        var third = second.nextElementSibling;
+        third.style.color = "blue";
+
+        // sideways-2
+        var thrd = document.querySelectorAll(".std-list-5 li")[2];
+        thrd.style.color = "blue";
+
+        var scnd = thrd.previousElementSibling;
+        scnd.style.color = "yellow";
+
+        var frst = scnd.previousElementSibling;
+        frst.style.color = "green";
+
+
+    </script>
+
+</body>
+</html>

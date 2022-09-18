@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Map Function </title>
+</head>
+<body>
+    
+    <script>
+
+        var num = [4, 9, 16, 25, 36];
+        var arr = num.map(Math.sqrt);
+
+        document.write("Array-1 : ", arr, "<br>");
+
+        var nums = [10, 20, 30, 40];
+        var ar = nums.map(multi);
+
+        function multi(n)
+        {
+            return n * 10;
+        }
+
+        document.write("Array-2 : ", ar, "<br>");
+
+        var info = [
+            {firstname : "Ar", lastname : "Anik"},
+            {firstname : "Osim", lastname : "Ahmed"},
+            {firstname : "Mahinur", lastname : "Alam"}
+        ];
+
+        function fullName(value)
+        {
+            return (value.firstname + " " + value.lastname);
+        }
+
+        person = info.map(fullName);
+
+        document.write("Person Info : ", person);
+
+    </script>
+
+</body>
+</html>

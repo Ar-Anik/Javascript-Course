@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
 
-        <script>
+        function Student(firstname, lastname, age, cgpa, university){
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+            this.cgpa = cgpa;
+            this.university = university;
 
-            var arr = new Array();
+            this.fullname = function(){
+                return this.firstname + " " + this.lastname;
+            }
 
-            document.write(arr.length);
+            this.display = function() {
+                document.write("Name : ", this.fullname(), "<br>");
+                document.write("Age : ", this.age, "<br>");
+                document.write("CGPA : ", this.cgpa, "<br>");
+                document.write("University : ", this.university, "<br>");
+            }
+        }
 
+        var std1 = new Student("Aubdur Rob", "Anik", 14, 3.92, "University Of Asia Pacific");
+        std1.id = 18101073;
 
-        </script>
+        var std2 = new Student("Osman", "Goni", 18, 3.58, "USA");
+        var std3 = new Student("Jonnay", "Dept", 30, 3.18, "NSU");
 
-    </body>
+        document.write(std1.firstname, " ", std1.lastname, " ", std1.age, " ", std1.cgpa, " ", std1.university, " ", std1.id, "<br>");
+        document.write("Full Name : ", std1.fullname(), "<br>");
+
+        document.write("Full Name : ", std1.fullname(), "<br>");
+        document.write("Full Name : ", std1.fullname(), "<br>");
+
+        std2.display();
+        std3.display();
+
+        std2.display();
+        std3.display();
+
+    </script>
+</body>
 </html>

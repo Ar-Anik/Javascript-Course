@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Query Selector Exercise </title>
+</head>
+<body>
+    
+    <a href="#"> Home </a>
+
+    <ul id="id1">
+        <li> <a href="#"> UAP </a> </li>
+        <li> Bangladesh </li>
+    </ul>
+
+    <ul id="id2">
+        <li> <a href="#"> MIT </a> </li>
+        <li> America </li>
+    </ul>
+
+    <div class="my-div">
+        <a href="#"> contact </a>
+    </div>
+
+    <script>
+
+        document.querySelector("a").innerHTML = "Base";
+
+        document.querySelector("#id1 li a").innerHTML = "TUAP";
+
+        document.querySelector(".my-div a").innerHTML = "Call me";
+
+    </script>
+
+</body>
+</html>

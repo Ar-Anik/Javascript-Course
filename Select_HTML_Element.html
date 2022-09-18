@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1 id="head1"> Aubdur Rob Anik </h1>
+    <p id="para1"> 
+        Roads become muddy and slippery. Passers-by are seen with 
+        umbrellas because they can not go without it. Many people 
+        walk along the road with shoes in hands and fold their 
+        clothes up. A rainy day is a curse for poor people.     
+    </p>
+
+    <h2 id="head2">
+        University of Asia Pacific
+    </h2>
+
+    <h3>
+        Javascript Bangla Tutorial
+    </h3>
+        
+    <h3>
+        Fresh Drinking Water
+    </h3>
+
+    <h3>
+        Fresh Facial Tissue
+    </h3>
+
+    <h1 class>
+
+    </h1>
+
+    <h1 class="classid">
+        Komolapur Railway Station
+    </h1>
+
+    <h1 class="classid">
+        Airport Railway Station
+    </h1>
+
+    <script>
+
+        document.getElementById("head1").innerHTML = "Oshim Akram";
+        var id1 = document.getElementById("para1");
+        id1.innerHTML = "Rainy Day..........Rainy Day";
+
+        var id2 = document.getElementById("head2");
+        id2.innerHTML = "UAP";
+
+        document.getElementsByTagName("h3")[0].innerHTML = "Javascript DOM Operation";
+
+        document.getElementsByTagName("h3")[1].innerHTML = "Fresh Tali Khata";
+
+        document.getElementsByTagName("h3")[2].innerHTML = "Nascafe Cofi";
+
+        //document.getElementsByClassName("classid")[0].innerHTML = "Bangladesh Railway Station";
+
+        //document.getElementsByClassName("classid")[1].innerHTML = "VVIP Railway Station";
+
+        var clsid = document.getElementsByClassName("classid");
+        clsid[0].innerHTML = "Bangladesh Railway Station";
+        clsid[1].innerHTML = "VVIP Railway Station";
+
+    </script>
+
+</body>
+</html>

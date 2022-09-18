@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Nested Object </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script>
+            // Example-1
+            var info = {
+                name : "Aubdur Rob Anik",
+                age : 21,
+
+                language : {
+                    lang1 : "C++",
+                    lang2 : "Python",
+                    lang3 : "Javascript"
+                }
+            }
+
+            document.write("Name : ", info.name, "<br>");
+            document.write(info.language.lang2, "<br>");
+            document.write(info.language["lang1"], "<br>");
+            document.write(info["language"]["lang3"], "<br>");
+
+            // Example-2
+            var person = {
+                name : "Jonny",
+                age : 30,
+
+                cars : [
+                    {
+                        name : "Ford",
+                        models : ["Focus", "Mustang"]
+                    },
+                    {
+                        name : "BMW",
+                        models : ["X3", "X5"]
+                    },
+                    {
+                        name : "TATA",
+                        models : ["Nexon", "Tigor"]
+                    }
+                ]
+            }
+
+            document.write(person.cars[0].name, "<br>");
+            document.write(person.cars[0].models[0], "<br>");
+            document.write(person.cars[0].models[1], "<br>");
+            document.write(person.cars[0].models, "<br>");
+
+            document.write(person.cars[2].models[1], "<br>");
+
+        </script>
+
+    </body>
+</html>

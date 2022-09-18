@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QuerySelector </title>
+</head>
+<body>
+
+    <h1 id="head1"> Aubdur Rob Anik </h1>
+
+    <p id="para1"> 
+        Roads become muddy and slippery. Passers-by are seen with 
+        umbrellas because they can not go without it. Many people 
+        walk along the road with shoes in hands and fold their 
+        clothes up. A rainy day is a curse for poor people.     
+    </p>
+
+    <h2 id="head2">
+        University of Asia Pacific
+    </h2>
+
+    <h3>
+        Javascript Bangla Tutorial
+    </h3>
+        
+    <h3>
+        Fresh Drinking Water
+    </h3>
+
+
+    <h1 class="classid">
+        Komolapur Railway Station
+    </h1>
+
+    <h1 class="classid">
+        Airport Railway Station
+    </h1>
+
+    <h1 class="cls">
+        This is a heading tag.
+    </h1>
+
+    <p class="cls">
+        This is a paragraph tag.
+    </p>
+
+    <div>
+        <h1> CSE Department </h1>
+        <p> University of Asia Pacific </p>
+    </div>
+
+    <script>
+        
+        // for id = #
+        // for class = .
+        // for tag = 
+
+        document.querySelector("#head1").innerHTML = "Oshim Akram";
+
+        var first = document.querySelector("#para1");
+        first.innerHTML = "Rainy Day..........Rainy Day";
+
+        document.querySelector("#head2").innerHTML = "UAP";
+
+        // Here Work for one and change first h3 element.
+        document.querySelector("h3").innerHTML = "Javascript DOM Operation.";
+
+        // Here Work for one and change first classid element.
+        document.querySelector(".classid").innerHTML = "Bangladesh Railway Station";
+
+        document.querySelector("p.cls").innerHTML = "Paragraph tag value is change.";
+
+        document.querySelector("div p").innerHTML = "UAP";
+    </script>
+
+</body>
+</html>

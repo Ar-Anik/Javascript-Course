@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> onclick </title>
+</head>
+
+<body>
+    
+    <button onclick="alert('I am Push Me Button')"> Push Me </button>
+
+    <br>
+    <br>
+
+    <button onclick="button1()"> Button-1 </button>
+
+    <br>
+
+    <p onclick="text1()">
+        Click On Me
+    </p>
+
+    <br>
+
+    <button onclick="button2()"> Button-2 </button>
+    <p id="id1">
+        If you click Above Button This Paragraph Value is Change
+    </p>
+
+    <br>
+    <button onclick="button3()"> Aubdur Rob Anik </button>
+    <p></p>
+    <img id="image1" src="#" alt="" height="" width="">
+
+    <script>
+
+        function button1()
+        {
+            alert("Hi I am Button-1");
+        }
+
+        function text1()
+        {
+            alert("Hi I am Text-1");
+        }
+
+        function button2()
+        {
+            var change = document.querySelector("#id1");
+            change.innerHTML = "You Click the Button-2 Thank you.";
+        }
+
+        function button3()
+        {
+            var change = document.querySelector("#image1");
+            change.src = "image/anik.jpg";
+            change.height= "300";
+            change.width = "200";
+        }
+
+    </script>
+
+</body>
+
+</html>
