@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rest Keyword </title>
+</head>
+<body>
+    
+    <script>
+
+        let num = [1, 2, 3, 4, 5, 6];
+        let [one, two, ...rest] = num;
+
+        document.write(`One : ${one} <br>`);
+        document.write(`Two : ${two} <br>`);
+        document.write(`Rest : ${rest} <br>`);
+
+        function add(a, b, ...c)
+        {
+            document.write(`A : ${a} <br>`);
+            document.write(`B : ${b} <br>`);
+
+            document.write(`C Length : ${c.length} <br>`);
+
+            document.write(`C : ${c} <br>`);
+            document.write(`${c[0]} ${c[1]} ${c[2]} ${c[3]} ${c[4]} ${c[5]}`);
+        }
+
+        add(1, 2, 3, 4, 5, 6, 7);
+
+        function myfun(a, b, ...arr)
+        {
+            for(var i in arr)
+            {
+                document.write(`${arr[i]} <br>`);
+            }
+        }
+
+        myfun("aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh", "ii", "jj", "kk", "ll", "mm", "oo", "pp")
+
+        function multiplication(a, ...rst)
+        {
+            return rst.map((b) => a*b);
+        }
+
+        let arr = multiplication(2, 15, 20, 25, 30, 35);
+        document.write(`Array : ${arr} <br>`);
+
+        function sortbyrest(...a)
+        {
+            return a.sort();
+        }
+
+        document.write(`Sorted Array : ${sortbyrest(5, 3, 7, 1, 4, 8, 0)}`);
+
+    </script>
+
+</body>
+</html>

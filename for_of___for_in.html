@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> For--->of and For--->in Loop </title>
+</head>
+<body>
+    
+    <script>
+        let nm = ["anik", "anan", "shawon", "osim", "mahinur"];
+
+        for(let i of nm)
+        {
+            document.write(i, "<br>");
+        }
+
+        let std = {
+            name : "Ar Anik",
+            id : 129,
+            cgpa : 3.57
+        }
+
+        for(let i in std)
+        {
+            document.write(`${i} : ${std[i]} <br>`);
+        }
+
+    </script>
+
+</body>
+</html>

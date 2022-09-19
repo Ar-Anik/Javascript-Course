@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title> Spread Operator </title>
+</head>
+<body>
+    
+    <script>
+
+        function add(x, y, z)
+        {
+            return x + y + z;
+        }     
+
+        let num = [1, 2, 3];
+        document.write(`Summation : ${add(...num)} <br>`);
+
+        let numbers = [5, ...num, 6];
+        document.write(`Array : ${numbers} <br>`);
+
+        let a = [1, 2, 3, 4], b = [6, 7, 8, 9];
+
+        let arr = [...a, ...b];
+        document.write(`Array : ${arr} <br>`);
+
+        let p1 = {
+            name : "Ar Anik",
+            id : 129,
+        }
+
+        let p2 = {
+            age : 14,
+            position : "small",
+        }
+
+        let p = {...p1, ...p2};
+        console.log(p)
+        document.write(`${p.name} ${p.id} ${p.age} ${p.position} <br>`);
+
+    </script>
+
+</body>
+</html>

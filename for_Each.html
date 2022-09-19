@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> For Each </title>
+</head>
+<body>
+    
+    <script>
+
+        let num = [10, 20, 30, 40, 50];
+
+        num.forEach(show);
+
+        function show(n)
+        {
+            document.write(`${n} `);
+        }
+
+        document.write("<br>");
+
+        num.forEach(function(n){
+            document.write(`${n} `);
+        });
+
+        document.write("<br>");
+
+        let sqrnum = [];
+
+        num.forEach(function(n){
+            sqrnum.push(n*n);
+        });
+
+        document.write(`Array-1 : ${sqrnum} <br>`);
+
+        num.forEach(function(x, indx, arr){
+            arr[indx] = x + x;
+        })
+
+        document.write(`Array-2 : ${num}`);
+
+    </script>
+
+</body>
+</html>

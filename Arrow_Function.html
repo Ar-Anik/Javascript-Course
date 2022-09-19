@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title> Arrow Function </title>
+</head>
+<body>
+    
+    <script>
+
+        const display = () => {
+            document.write("Hello, Are you upset? <br>");
+        }
+        display();
+
+        const display1 = () => document.write("Another Arrow Function 0_0 <br>");
+        display1();
+
+        const display3 = () => "Arrow Function Number-3";
+        document.write(display3(), "<br>");
+
+        const add = (num1, num2) => num1 + num2;
+        
+        document.write("Summation : ", add(10, 20), "<br>");
+        document.write("Summation : ", add(20, 30), "<br>");
+
+        const info = [
+             {
+                name : "Ar Anik",
+                id : 102,
+                cgpa : 3.57
+             },
+             {
+                name : "Md. Oshim",
+                id : 129,
+                cgpa : 3.92
+             },
+             {
+                name : "Mahinur Alam",
+                id : 130,
+                cgpa : 3.85
+             },
+             {
+                name : "Mominul Islam",
+                id : 125,
+                cgpa : 3.87
+             },
+             {
+                name : "Buddut Islam",
+                id : 119,
+                cgpa : 3.62
+             }
+        ]
+
+        document.write(info[0]["name"], "<br>");
+        document.write(info[0]["id"], "<br>");
+        document.write(info[0]["cgpa"], "<br>");
+
+        function highcg()
+        {
+            return info.filter(function(element){
+                return element.cgpa > 3.8;
+            }).map(function(y){
+                return y.name;
+            })
+        }
+
+        const highcgpa = () => {
+            return info.filter((element) => element.cgpa > 3.8).map((y) => y.name);
+        }
+
+        document.write(highcg(), "<br>");
+        document.write(highcgpa(), "<br>");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title> Object Literals </title>
+</head>
+<body>
+    
+    <script>
+
+         function first(name, age)
+         {
+            return {
+                name : name,
+                age : age
+            };
+         }
+
+         function second(name, age)
+         {
+            return{
+                name,
+                age
+            };
+         }
+
+         console.log(first("Anik", 14));
+         console.log(second("shawon", 35));
+
+         let Salary = {
+            body(){
+                return `Oshim salary 35000 Taka`;
+            }
+         }
+
+         console.log(Salary.body());
+
+         let message = {
+            'body name'(){
+                return `We Know Oshim and Mahinur Salary But CEO Don't Know.`;
+            }
+         }
+
+         console.log(message['body name']());
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Template Literals </title>
+</head>
+<body>
+    
+    <script>
+
+        let name = `Aubdur Rob Anik`;
+        document.write("Name : ", name, "<br>");
+
+        let actor = `"Jonny" isn't a Best Actor`;
+        document.write("Actor : ", actor, "<br>");
+
+        let firstName = "Oshim";
+        let lastName = "Akram";
+
+        let txt = `Welcome ${firstName} ${lastName}`;
+        document.write("Text : ", txt, "<br>");
+
+        let price = 15;
+        let vat = 0.25;
+
+        let total = `Total : ${price * (1+vat)}`;
+        document.write(total, "<br>");
+
+        let university = "University Of Asia Pacific";
+
+        let tag = `<h1>${university}</h1>`;
+        document.write(tag, "<br>");
+
+        let html = `<ul>`;
+        
+        html += `<li>Anik</li>`;
+        html += `<li>Oshim</li>`;
+        html += `<li>Mahinur</li>`;
+
+        html += '</ul>';
+
+        document.write(html);
+
+    </script>
+
+</body>
+</html>
