@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Find And FindIndex Function </title>
+</head>
+<body>
+
+    <script>
+        
+        // find(callback, value) return ther value of the first element that pass certain condition
+        let num = [5, 55, 4, 5, 78];
+        let even = num.find(x => x%2===0);
+        document.write(`First Even Number : ${even}<br>`);
+
+        let arr = [14, 58, 15, 74, 9];
+
+        let oddnumber = (n) => {
+            if(n%2 === 1)
+                return n;
+        }
+
+        let odd = arr.find(oddnumber);
+        document.write(`First Odd Number : ${odd}<br>`);
+
+
+        // FindIndex
+        let ar = [1, 2, 8, 7, 9, 3, 7, 87, 97, 4, 5, 6, 10, 14];
+
+        let evennumber = (n) =>{
+            if(n%2 === 0)
+                return n;
+        }
+
+        let evn = ar.findIndex(evennumber);
+        document.write(`Even Number : ${evn}<br>`);
+
+        // Object
+        let std = [
+            {
+                id : 101,
+                gpa : 3.25
+            },
+            {
+                id : 102,
+                gpa : 3.92
+            },
+            {
+                id : 103,
+                gpa : 4.85
+            },
+            {
+                id : 104,
+                gpa : 4.64
+            },
+            {
+                id : 105,
+                gpa : 5
+            }
+        ];
+
+        console.log(std.find(x => x.gpa > 4.5));
+        console.log(std.findIndex(x => x.gpa > 3.5));
+
+
+    </script>
+
+</body>
+</html>

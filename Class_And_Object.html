@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class and Object </title>
+</head>
+<body>
+    
+    <script>
+
+        class info 
+        {
+            constructor(id, name, university){
+                this.id = id;
+                this.name = name;
+                this.university = university;
+            }
+        }
+
+        let std1 = new info(14, "Aubdur Rob Anik", "University of Asia Pacific");
+
+        document.write(std1.id, "<br>");
+        document.write(std1.name, "<br>");
+        document.write(std1.university, "<br>");
+
+        std1.name = "Md. Oshim";
+        document.write(std1.name);
+
+    </script>
+
+</body>
+</html>

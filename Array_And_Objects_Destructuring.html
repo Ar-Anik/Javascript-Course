@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array And Objects Destructuring </title>
+</head>
+<body>
+    
+    <script>
+
+        let num = [10, 20, 30, 40, 50, 60, 70, 80];
+        let [a, b, c, d, e, f, g, h] = num;
+
+        document.write(`${a} ${b} ${c} ${d} ${e} ${f} ${g} ${h} <br>`);
+
+
+        /// swap value
+        let num1 = 10, num2 = 20;
+
+        [num1, num2] = [num2, num1];
+
+        document.write(`Number-1 : ${num1}, Number-2 : ${num2} <br>`);
+
+
+        // Object Destructur
+        let info = {
+            id : 18101073,
+            fullName : "Aubdur Rob Anik",
+            university : "UAP",
+            cgpa : 3.57
+        };
+
+        let {id, fullName} = info;
+
+        document.write(`ID : ${id} <br>`);
+        document.write(`FullName : ${fullName} <br>`);
+
+        let stdinfo = {
+            id : 18101072,
+            Name : "Md Oshim",
+            university : "IUBAT",
+            cgpa : 3.92,
+            language : {
+                native : "Bangla",
+                beginner : "English",
+            }
+        }
+
+        let {Name, language} = stdinfo;
+
+        document.write(`FullName : ${Name}, Native-Language : ${language.native}<br>`);
+
+        // Function Destructur
+        let studentinfo = ({id, university}) => {
+            document.write(`ID : ${id}<br>`);
+            document.write(`University : ${university}<br>`);
+        }
+
+        let std = {
+            id : 18101079,
+            name : "Mahinur Alam",
+            university : "IUBAT",
+            cgpa : 3.67
+        }
+
+        studentinfo(std);
+
+
+    </script>
+</body>
+</html>
