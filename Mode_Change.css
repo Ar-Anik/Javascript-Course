@@ -1,0 +1,10 @@
+.white{
+    background-color:white;
+    color: black;
+}
+
+.night{
+    background-color: black;
+    color: white;
+    text-align: center;
+}

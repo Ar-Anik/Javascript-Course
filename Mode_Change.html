@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mode_Change.css">
+    <title>Mode Change</title>
+</head>
+<body>
+    
+    <div id="dv" class="white">
+        <h1>In This Project Mode Change</h1>
+    </div>
+
+    <button onclick="modeChange()">Mode</button>
+
+    <script>
+        function modeChange(){
+            const element = document.getElementById("dv");
+
+            if (element.className == "white") {
+                element.className = "night";
+            } else {
+                element.className = "white";
+            }
+        }
+    </script>
+
+</body>
+</html>
