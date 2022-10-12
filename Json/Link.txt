@@ -1,0 +1,4 @@
+https://codebeautify.org/jsonviewer
+https://jsonpathfinder.com/
+https://www.liquid-technologies.com/online-json-to-schema-converter
+https://www.jsonschemavalidator.net/

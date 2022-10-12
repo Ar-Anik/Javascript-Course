@@ -1,0 +1,31 @@
+{
+	"public": [
+		{
+			"name": "Aubdur Rob Anik",
+			"age": 14,
+			"nid": "18101073"
+		},
+		{
+			"name": "Anisul Islam Oni",
+			"age": 25,
+			"nid": "18101079"
+		}
+	],
+	"student": [
+		{
+			"name": "Milon",
+			"age": 18,
+			"School": "Santipur School"
+		},
+		{
+			"name": "Zahid",
+			"age": 19,
+			"School": "Ali Ahmed School"
+		},
+		{
+			"name": "Sobuj",
+			"age": 20,
+			"School": "Adorsho School"
+		}
+	]
+}
