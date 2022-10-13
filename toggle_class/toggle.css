@@ -1,0 +1,12 @@
+.changeDiv{
+    background-color: coral;
+    color:blue;
+    font-size: 30px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+button{
+    margin: 10px;
+}

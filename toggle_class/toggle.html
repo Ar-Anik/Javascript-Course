@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="toggle.css">
+    <title>Toggle ClassList</title>
+</head>
+<body>
+    
+    <div id="ids" class="dv">
+        <p>This comes from toggle File</p>
+    </div>
+    
+    <button onclick="func()">Class Change</button>
+
+    <script>
+
+        function func()
+        {
+            var element = document.getElementById("ids");
+            element.classList.toggle("changeDiv");
+        }
+
+    </script>
+
+</body>
+</html>
