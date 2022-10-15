@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSON Stringify </title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Object
+        let obj = {
+            name: "Aubdur Rob Anik",
+            age : 14,
+            id : 18101073
+        };
+
+        let str = JSON.stringify(obj);
+
+        document.write("JSON Formate : ", str, "<br>");
+        
+        // Array
+        let arr = ["TATA", "Toyota", "Akij", "Audi"];
+
+        let str1 = JSON.stringify(arr);
+
+        document.write("Array in JSON Formate : ", str1, "<br>");
+
+        // Date Object
+        let dt = {
+            name: "Aubdur Rob Anik",
+            id : "18101073",
+            age : 30,
+            date : new Date()
+        };
+
+        let str2 = JSON.stringify(dt);
+
+        document.write("Date Object : ", str2, "<br>");
+
+        // Function
+        let func = {
+            name : "Ar Anik",
+            age : function () { return 30; },
+            University : "University Of Asia Pacific"
+        };
+
+        let str3 = JSON.stringify(func);
+
+        document.write("Function in JSON : ", str3, "<br>");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="localStorage.css">
+    <title> Local Storage </title>
+</head>
+<body>
+    
+    <fieldset>
+
+        <legend>Input Key and Value</legend>
+
+        <input type="text" id="inputKey" placeholder="Enter Key" />
+
+        <input type="text" id="inputValue" placeholder="Enter Value" />
+
+        <button type="button" id="btn">Submit</button>
+
+    </fieldset>
+
+    <fieldset>
+        
+        <legend>Local Storage</legend>
+
+        <div id="output"></div>
+
+    </fieldset>
+
+    <script>
+
+        // localStorage.removeItem("name");
+        // console.log(localStorage);
+
+        // localStorage.setItem("name", "Aubdur Rob Anik");
+        // localStorage.setItem("age", 14);
+        // localStorage.setItem("id", "290");
+
+        // var vlu1 = localStorage.getItem("name");
+        // var vlu2 = localStorage.getItem("age");
+        // var vlu3 = localStorage.getItem("id");
+
+        // console.log(vlu1);
+        // console.log(vlu2);
+        // console.log(vlu3);
+
+        // localStorage.removeItem("name");
+
+        // console.log(localStorage);
+
+        // localStorage.clear();
+
+        // console.log(localStorage);
+
+
+        var inputkey = document.getElementById("inputKey");
+        var inputValue = document.getElementById("inputValue");
+        var inputBtton = document.getElementById("btn");
+
+        var outputValue = document.getElementById("output");
+
+        inputBtton.addEventListener("click", function () {
+            var key = inputkey.value;
+            var value = inputValue.value;
+
+            if(key && value)
+            {
+                localStorage.setItem(key, value);
+                location.reload();
+            }
+        });
+
+        for(var i=0; i<localStorage.length; i++)
+        {
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+
+            outputValue.innerHTML += `${key}: ${value}` + "<br>";
+        }
+
+    </script>
+
+</body>
+</html>

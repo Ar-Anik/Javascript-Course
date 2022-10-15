@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JSON Parse </title>
+</head>
+<body>
+    
+    <script>
+
+        // Object
+        let txt = '{"name":"Aubdur Rob Anik", "age":14, "id":"18101073"}';
+
+        let obj = JSON.parse(txt);
+
+        document.write(typeof(obj), "<br>");
+        document.write(obj.name,"<br>", obj.age,"<br>", obj.id, "<br>");
+
+        // Array
+        let txt1 = '["Toyota", "Akij", "TATA", "Mishuk"]';
+        let arr = JSON.parse(txt1);
+
+        document.write(typeof(arr), "<br>");
+        document.write("Array : ", arr, "<br>");
+    </script>
+
+</body>
+</html>
