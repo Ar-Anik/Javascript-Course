@@ -16,8 +16,15 @@
 
     <script>
 
-        var a = document.querySelector(".dj2");
-        console.log(a);
+        var vlu = JSON.parse(localStorage.getItem("notfound"));
+        if(vlu === null)
+        {
+            document.write("Aubdur Rob Anik");
+        }
+        else
+        {
+            document.write("Value Ache");
+        }
 
     </script>
 </body>
