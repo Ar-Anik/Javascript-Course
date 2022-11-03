@@ -11,52 +11,70 @@
 
 // higherOrderfunction(6, square);
 
-const taskOne = (callback) => {
-    console.log("Task-1");
+function prnt(value){
+    console.log(value);
+}
+
+function calculator(num1, num2, callback){
+    var sum = num1+num2;
+
+    callback(sum);
+}
+
+calculator(5, 6, prnt);
+
+const task1 = (callback) => {
+    console.log("task 1");
     callback();
 };
 
-const taskTwo = (callback) => {
+const task2 = (callback) => {
     setTimeout(function(){
         console.log("Task-2");
         callback();
     }, 2000);
 };
 
-const taskThree = (callback) => {
-    console.log("Task-3");
-    callback();
-};
+const task3 = (callback) => {
+    setTimeout(function(){
+        console.log("Task-3");
+        callback();
+    }, 1000);
+}
 
-const taskFour = (callback) => {
-    console.log("Task-4");
-    callback();
-};
+const task4 = (callback) => {
+    setTimeout(function(){
+        console.log("Task-4");
+        callback();
+    }, 3000);
+}
 
-const taskFive = (callback) => {
+const task5 = (callback) => {
     console.log("Task-5");
-    callback();
-};
+}
 
-// taskOne(function f1() {
-//     taskTwo(function f2() {
-//         taskThree(function f3() {
-//             taskFour(function f4() {
-//                 taskFive();
-//             });
-//         });
-//     });
-// });
 
-taskOne(() => {
-    taskTwo(() => {
-        taskThree(() => {
-            taskFour(() => {
-                taskFive();
+task1(function(){
+    task2(function() {
+        task3(function(){
+            task4(function(){
+                task5();
             });
         });
     });
 });
+
+
+task1(() => {
+    task2(() => {
+        task3(() => {
+            task4(() => {
+                task5();
+            });
+        });
+    });
+});
+
 
 console.log("Button Start");
 document.querySelector("button").addEventListener("click", () => {
