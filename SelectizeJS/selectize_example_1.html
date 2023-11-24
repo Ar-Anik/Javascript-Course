@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectize.js Extended Example</title>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include Selectize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css"
+    />
+
+    <!-- Include Selectize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+  </head>
+  <body>
+    <h1>Selectize.js Extended Example</h1>
+
+    <!-- Select element to enhance -->
+    <select id="extendedSelect" multiple></select>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize Selectize with options
+        $("#extendedSelect").selectize({
+          valueField: "id", // Property to use as the value
+          labelField: "name", // Property to use as the display label
+          searchField: ["name"], // Property to use for searching
+          maxItems: 3, // Maximum number of items that can be selected
+          placeholder: "Select items",
+          create: false, // Disable creating new items
+          preload: true, // Load options on initialization
+
+          render: {
+            option: function (item, escape) {
+              return "<div>" + escape(item.name) + "</div>";
+            },
+            item: function (item, escape) {
+              return (
+                '<div data-id="' +
+                escape(item.id) +
+                '">' +
+                escape(item.name) +
+                "</div>"
+              );
+            },
+          },
+
+          load: function (query, callback) {
+            // Simulate loading data from a remote source
+            $.ajax({
+              url: "https://jsonplaceholder.typicode.com/users",
+              type: "GET",
+              dataType: "json",
+              success: function (data) {
+                callback(data.slice(0, 10)); // Load only the first 10 items for simplicity
+              },
+            });
+          },
+
+          onChange: function (value) {
+            console.log("Selected values:", value);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

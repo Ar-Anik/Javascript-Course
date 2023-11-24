@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectize JS Example</title>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include Selectize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css"
+    />
+
+    <!-- Include Selectize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+  </head>
+  <body>
+    <h1>Selectize.js Example</h1>
+
+    <select id="mySelect" multiple>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+      <option value="5">Option 5</option>
+    </select>
+
+    <script>
+      $(document).ready(function () {
+        // Initialize Selectize
+        $("#mySelect").selectize({
+          placeholder: "Select items",
+          maxItems: 5, // Maximum number of items that can be selected
+          onChange: function (value) {
+            console.log("Selected values:", value);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

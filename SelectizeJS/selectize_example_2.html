@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectize.js Example</title>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include Selectize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css"
+    />
+
+    <!-- Include Selectize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+  </head>
+  <body>
+    <h1>Selectize.js Example</h1>
+
+    <!-- Select element to enhance -->
+    <select id="customSelect" multiple></select>
+
+    <script>
+      $(document).ready(function () {
+        // Sample data
+        var data = [
+          { id: 1, name: "Option 1", color: "red" },
+          { id: 2, name: "Option 2", color: "blue" },
+          { id: 3, name: "Option 3", color: "green" },
+        ];
+
+        // Initialize Selectize with options
+        $("#customSelect").selectize({
+          valueField: "id",
+          labelField: "name",
+          searchField: ["name", "color"], // Search by name or color
+          create: true, // Allow creating new items
+          render: {
+            option: function (item, escape) {
+              return (
+                '<div style="color: ' +
+                escape(item.color) +
+                '">' +
+                escape(item.name) +
+                "</div>"
+              );
+            },
+            item: function (item, escape) {
+              return (
+                '<div data-id="' +
+                escape(item.id) +
+                '">' +
+                escape(item.name) +
+                "</div>"
+              );
+            },
+          },
+          options: data,
+          onChange: function (value) {
+            console.log("Selected values:", value);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

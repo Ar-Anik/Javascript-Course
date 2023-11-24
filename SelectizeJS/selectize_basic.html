@@ -1,0 +1,34 @@
+<!-- Selectize is the hybrid of a textbox and <select> box. 
+It's jQuery-based and it's useful for tagging, contact lists, country selectors, and so on.-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Selectize Style Example</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Include Selectize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.default.min.css"
+    />
+
+    <!-- Include Selectize.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+  </head>
+  <body>
+    <select id="mySelect">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        $("#mySelect").selectize();
+      });
+    </script>
+  </body>
+</html>
